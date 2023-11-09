@@ -1,20 +1,17 @@
 import React,{useState,useEffect,useCallback} from "react"
+import {Walker} from "./Walker"
 
-const MARKER_RADIUS=20
+const MARKER_RADIUS=10
 
 const Map = ()=>{
-    const [walker,setWalker] = useState({path:[[10,20], [20,30], [50,50]]})
-    const [x,y] = walker.path[walker.path.length-1]
+    const [walker,setWalker] = useState(new Walker([[10,20], [20,30], [50,50]]) )
+    const [x,y] = walker.getPosition()
     
     useEffect(()=>{
         console.log(`Start timer`)
         window.setInterval(()=>{
-            const [x,y] = walker.path[walker.path.length-1]
-            console.log(`timer ${x},${y}`)
-            walker.path.push([x+10,y+10])
-            setWalker({
-                path: walker.path
-            })
+            console.log(`timer`)
+            setWalker(walker.move())
 
         },3000)
 
