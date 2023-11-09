@@ -39,6 +39,7 @@
 
 #map {
   background-color: #020;
+  background-image: url("/public/map.jpg");
   position: fixed;
   top: 3em;
   left: 0em;

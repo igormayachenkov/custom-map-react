@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useCallback} from "react"
 import {Walker} from "./Walker"
 
-const MARKER_RADIUS=10
+const MARKER_RADIUS=12
 
 const Map = ()=>{
     const [walker,setWalker] = useState(new Walker([[10,20], [20,30], [50,50]]) )
@@ -30,12 +30,12 @@ const Map = ()=>{
 
         <svg height="100%" width="100%">
             <polyline points={trackPoints}
-            stroke="white" strokeWidth="3" fill="none"
+            stroke="red" strokeWidth="5" fill="none"
             />
         </svg> 
 
         <svg height={2*(MARKER_RADIUS+1)} width={2*(MARKER_RADIUS+1)} style={markerStyle}>
-            <circle cx={MARKER_RADIUS+1} cy={MARKER_RADIUS+1} r={MARKER_RADIUS} stroke="white" strokeWidth="2" fill="red" />
+            <circle cx={MARKER_RADIUS+1} cy={MARKER_RADIUS+1} r={MARKER_RADIUS} stroke="red" strokeWidth="2" fill="blue" />
         </svg> 
     </div>
 
