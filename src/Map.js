@@ -26,7 +26,6 @@ const Map = ()=>{
     console.log(`=> Map`, trackPoints)
 
     return <div id="map">
-        walker: {walker.toString()}
 
         <svg height="100%" width="100%">
             <polyline points={trackPoints}
@@ -34,7 +33,7 @@ const Map = ()=>{
             />
         </svg> 
 
-        <svg height={2*(MARKER_RADIUS+1)} width={2*(MARKER_RADIUS+1)} style={markerStyle}>
+        <svg className="marker" height={2*(MARKER_RADIUS+1)} width={2*(MARKER_RADIUS+1)} style={markerStyle}>
             <circle cx={MARKER_RADIUS+1} cy={MARKER_RADIUS+1} r={MARKER_RADIUS} stroke="red" strokeWidth="2" fill="blue" />
         </svg> 
     </div>

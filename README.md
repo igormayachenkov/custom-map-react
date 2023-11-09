@@ -1,8 +1,15 @@
-## About
-A custom map example. Based on React engine and SVG graphics.
-In some cases Google Maps give you just a green field only. That is the first reason. The second one is a local network.
-Example: http://eprotection.org/cameras/?ws=observer
+# A custom map example. 
+Based on React engine and SVG graphics. Shows: 
+- a custom map image
+- a movable and clickable marker 
+- a modifyable polyline (track)
 
+### The reason
+- In some cases Google Maps give you just a green field only. 
+- The second one is an isolated local network.
+
+### Demo
+The working installation is here: http://188.120.249.76/custom-map-react/
 
 ## Local start
 1. Download the code    
@@ -16,10 +23,10 @@ Example: http://eprotection.org/cameras/?ws=observer
 ## Installation on the server
 1. Download the code    
     `git clone git@github.com:igormayachenkov/custom-map-react.git`
-2. Make a build  
+2. Make a build   
     `npm install --omit=dev`   
     `npm run build` => it creates "build" forder
 3. To expose as a subpage `/custom-map-react`. Set symink dashboard/custom-map-react -> build  (only once)   
     `cd /var/www/html`   
-    `ln -s /your-path/custom-map-react/build cameras`
+    `ln -s /your-path/custom-map-react/build custom-map-react`
 
